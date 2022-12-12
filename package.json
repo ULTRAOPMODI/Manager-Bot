@@ -1,0 +1,33 @@
+{
+  "name": "automod-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.13.0",
+    "colors": "^1.4.0",
+    "discord-logs": "^2.2.1",
+    "discord.js": "^14.6.0",
+    "express": "^4.18.2",
+    "ez-antiswear": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "node-fetch": "^3.2.6",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.2"
+  },
+  "devDependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "ffmpeg-static": "^5.1.0",
+    "libsodium-wrappers": "^0.7.10",
+    "node": "^18.12.0",
+    "nodemon": "^2.0.20",
+    "npm": "^8.19.3"
+  }
+}

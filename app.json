@@ -1,0 +1,18 @@
+{
+  "name": "AutoMod",
+  "description": "A powerful discord bot project that use in make powerful moderator bot",
+  "keywords": ["automodbot", "moderation", "moderator"],
+  "repository": "https://github.com/ULTRAOPMODI/AutoModBot.git",
+  "env": {
+  "TOKEN": {
+   "description": "Enter here Your bot token from discord developers portals",
+   "value": ""
+  },
+  "logChannelId": {
+   "description": "Enter here Your log channel ID",
+   "value": ""
+  },
+  "ChannelId": "Enter here Your log channel ID",
+  "value": ""
+ }
+}
