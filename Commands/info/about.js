@@ -1,34 +1,20 @@
 let Discord = require("discord.js");
+let moment = require("moment");
 
 module.exports = {
    data: new Discord.SlashCommandBuilder()
       .setName("info")
-      .setDescription("Get users identity")
-      .addUserOption((option) => 
-         option.setName("user")
-           .setDescription("Choose a user then You can get the info")
-           .setRequired(true)),
+      .setDescription("Get user identity"),
    run: async function(Bot, interaction) {
-  let stuff = interaction.options.getMember("user");
-  let date = new Date();
-  let h = date.getHours();
-
-  let ampm = h > 12 ? "PM" : "AM";
-           
-  if(h > 12)
-  {
-   h = h - 12;
-  }
-           
   var embed = new Discord.EmbedBuilder()
         .setTitle("Informations")
         .addFields(
-          {name: "Username:", value: `${stuff.user.username}`},
-          {name: "Time:", value: `**${h}** : **${date.getMinutes()}** : **${date.getSeconds()}** **${ampm}**`},
-          {name: "Date:", value: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`}
+          {name: "Username:", value: `${interaction.user.username}`},
+          {name: "Network speed", value: `${Math.round(Bot.ws.ping)}ms`},
+          {name: "Joined on Discord", value: `${moment(member.user.createdAt). format("DD MMM YYYY")}`}
         )
         .setColor(Discord.Colors.Blue)
-        .setThumbnail(stuff.user.displayAvatarURL())
+        .setThumbnail(interaction.user.displayAvatarURL())
 
   await interaction.reply({ embeds: [embed] });
  }
