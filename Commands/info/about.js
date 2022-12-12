@@ -11,7 +11,7 @@ module.exports = {
         .addFields(
           {name: "Username:", value: `${interaction.user.username}`},
           {name: "Network speed", value: `${Math.round(Bot.ws.ping)}ms`},
-          {name: "Joined on Discord", value: `${moment(member.user.createdAt). format("DD MMM YYYY")}`}
+          {name: "Joined on Discord", value: `${moment(member.user.createdAt).format("DD MMM YYYY")}`}
         )
         .setColor(Discord.Colors.Blue)
         .setThumbnail(interaction.user.displayAvatarURL())
