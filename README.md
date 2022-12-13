@@ -25,23 +25,8 @@ and Your bot is running. But if You want it 24/7 so then copy the output url and
 
 ***Thanks for choosing AutoMod Bot***
 
-<p>
- <input type="checkbox" checked>
- Moderation
-</p>
-<p>
- <input type="checkbox" checked>
- Auto Moderator
-</p>
-<p>
- <input type="checkbox" readonly>
- Prefix Command
-</p>
-<p>
- <input type="checkbox" checked>
- Anti bad words
-</p>
-<p>
- <input type="checkbox" checked>
- Slash Commands
-</p>
+- Moderation
+- Auto Moderator
+- Prefix Command
+- Anti bad words
+- Slash Commands
