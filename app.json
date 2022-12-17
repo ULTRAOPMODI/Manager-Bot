@@ -11,8 +11,6 @@
   "logChannelId": {
    "description": "Enter here Your log channel ID",
    "value": ""
-  },
-  "ChannelId": "Enter here Your log channel ID",
-  "value": ""
+  }
  }
 }
