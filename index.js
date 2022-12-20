@@ -6,6 +6,7 @@ const Discord = require("discord.js")
 const config = require("./config.json");
 const colour = require("colors");
 const logs = require("discord-logs");
+const express = require("express");
 
 /*
  * Require Handlers Functions
@@ -25,7 +26,7 @@ const { logSystem } = require("./System/log.js");
 /*
  * Main Coding
  */
-
+let app = express();
 let Bot = new Discord.Client({ 
  intents: [Object.keys(Discord.GatewayIntentBits)],
  partials: [Object.keys(Discord.Partials)],
@@ -44,6 +45,12 @@ console.log(colour.bold.white("[*] Setting up..."));
 console.log(colour.bold.brightGreen("\t\t ┌───────────────────┐"));
 console.log(colour.bold.brightGreen("\t\t │     Launching     │"));
 console.log(colour.bold.brightGreen("\t\t └───────────────────┘"));
+
+app.get("/", async function(req, res) {
+ await res.send("<h1>Hello World!</h1>");
+});
+
+app.listen(3000);
 
 Bot.commands = new Discord.Collection();
 Bot.buttons = new Discord.Collection();
